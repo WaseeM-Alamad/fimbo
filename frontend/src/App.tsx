@@ -1,9 +1,9 @@
-import "./App.css";
+import "./styles/App.scss";
 
 function App() {
   return (
     <div style={{ margin: "1rem" }}>
-      <h1 style={{ color: "#dd7cc3", fontSize: "4rem" }}>FIMBO</h1>
+      <h1 style={{ color: "#dd7cc3", fontSize: "2rem" }}>FIMBO</h1>
       <br />
       <br />
       <div style={{ fontSize: "4rem", fontWeight: "900" }}>
