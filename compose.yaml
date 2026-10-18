@@ -1,0 +1,35 @@
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fimbo-api
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__DefaultConnection: "Host=db;Port=5432;Database=fimbo;Username=fimbo;Password=${POSTGRES_PASSWORD:-local_dev_password}"
+    ports:
+      - "8080:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: postgres:18
+    container_name: fimbo-db
+    environment:
+      POSTGRES_DB: fimbo
+      POSTGRES_USER: fimbo
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-local_dev_password}
+    ports:
+      - "5432:5432"
+    volumes:
+      - fimbo_data:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U fimbo -d fimbo"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  fimbo_data:
