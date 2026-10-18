@@ -1,3 +1,4 @@
+import { Button } from "./components/Button/Button";
 import "./styles/App.scss";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
         <br />
         <span style={{ color: "#d8411f" }}>before</span> nine a.m.
       </div>
+      <Button variant="primary" size="lg">CONFIRM</Button>
     </div>
   );
 }

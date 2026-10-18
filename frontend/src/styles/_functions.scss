@@ -1,0 +1,7 @@
+@function hover-color($color, $mix-with: white, $amount: 4%) {
+  @return color-mix(in srgb, #{$color}, #{$mix-with} $amount);
+}
+
+@function active-color($color, $mix-with: white, $amount: 10%) {
+  @return color-mix(in srgb, #{$color}, #{$mix-with} $amount);
+}
