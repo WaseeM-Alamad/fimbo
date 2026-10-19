@@ -1,3 +1,4 @@
+import ButtonLoader from "../ButtonLoader/ButtonLoader";
 import "./Button.scss";
 import type { ButtonHTMLAttributes, PointerEvent } from "react";
 
@@ -75,6 +76,7 @@ export function Button({
       onPointerLeave={handlePointerLeave}
     >
       <div className="button__content">{children}</div>
+      <ButtonLoader />
     </button>
   );
 }

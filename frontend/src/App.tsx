@@ -9,7 +9,12 @@ function App() {
         <br />
         <span style={{ color: "#d8411f" }}>before</span> nine a.m.
       </div>
-      <Button variant="primary" size="lg">CONFIRM</Button>
+      <Button variant="outline" size="lg" style={{marginRight: ".5rem"}}>
+        CANCEL
+      </Button>
+      <Button variant="primary" size="lg">
+        CONFIRM
+      </Button>
     </div>
   );
 }
