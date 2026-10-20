@@ -10,6 +10,7 @@
 body {
   background-color: #e5d9c9;
   color: var(--color-text);
+  height: 100dvh;
 }
 
 button {
@@ -17,4 +18,17 @@ button {
   outline: none;
   border: none;
   cursor: pointer;
+}
+
+.no-transitions {
+  * {
+    transition: none !important;
+    &::before {
+      transition: none !important;
+    }
+
+    &::after {
+      transition: none !important;
+    }
+  }
 }

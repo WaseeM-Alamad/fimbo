@@ -1,12 +1,11 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./styles/global.scss";
-import App from "./App.tsx";
-import Navbar from "./components/Navbar/Navbar.tsx";
+import { RouterProvider } from "react-router-dom";
+import router from "./routes/index.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <Navbar />
-    <App />
+    <RouterProvider router={router} />
   </StrictMode>,
 );

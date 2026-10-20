@@ -15,8 +15,19 @@
 
   span {
     display: block;
-    width: 0.438em;
-    height: 0.438em;
+    width: 6px;
+    height: 6px;
+
+    .button--md & {
+      width: 5.5px;
+      height: 5.5px;
+    }
+
+    .button--sm & {
+      width: 4.5px;
+      height: 4.5px;
+    }
+
     background-color: black;
     will-change: transform;
     animation: jump-anim 1s var(--ease-bounce) infinite;

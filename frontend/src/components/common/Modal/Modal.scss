@@ -1,0 +1,15 @@
+.modal {
+  width: 90%;
+  max-width: fit-content;
+  box-sizing: border-box;
+  position: fixed;
+  padding: 1.2rem 1.2rem;
+  transform-origin: center center;
+  box-shadow: 1px 1px 20px 0 var(--shadow);
+  background-color: var(--menu-bg);
+  border-radius: 1.2rem;
+  border: solid 1px var(--border-soft);
+  left: 50%;
+  top: 40%;
+  z-index: 210;
+}

@@ -1,0 +1,25 @@
+.floating-menu {
+  background-color: var(--menu-bg);
+  padding: 0.3rem;
+  z-index: 110;
+  border-radius: 0.8rem;
+  max-height: 357px;
+  overflow: hidden;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &__category {
+    user-select: none;
+    color: var(--text-muted);
+    font-size: 12px;
+    padding: 6px 8px;
+    box-sizing: border-box;
+  }
+
+  html[data-scroll-locked] .floating-menu-pinned & {
+    margin-right: var(--scrollbar-width);
+  }
+}

@@ -2,7 +2,7 @@ import ButtonLoader from "../ButtonLoader/ButtonLoader";
 import "./Button.scss";
 import type { ButtonHTMLAttributes, PointerEvent } from "react";
 
-const MAX_TILT = 8;
+const MAX_TILT = 6;
 
 type ButtonVariant =
   | "primary"
